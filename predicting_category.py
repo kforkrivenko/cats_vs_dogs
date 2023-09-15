@@ -17,7 +17,7 @@ def resize_image(img, label):
 
 
 def predict(image_path):
-    img = load_img('photo.jpg')
+    img = load_img(image_path)
     img_array = img_to_array(img)
     img_resized, _ = resize_image(img_array, '_')
     img_expended = np.expand_dims(img_resized, axis=0)
